@@ -1,0 +1,33 @@
+<h1>Form Page 2 Component</h1>
+
+<div [formGroup]="myformGroup">
+  <div>
+    <input type="text" formControlName="username" />
+    <label
+      style="color: red; font-size: small"
+      *ngIf="
+        myformGroup.get('username').invalid &&
+        myformGroup.get('username').touched
+      "
+      >Username required</label
+    >
+  </div>
+
+  <div>
+    <input type="text" name="" id="" formControlName="email" />
+    <label
+      for=""
+      style="color: red; font-size: small"
+      *ngIf="
+        myformGroup.get('email').invalid && myformGroup.get('email').touched
+      "
+      >Email required</label
+    >
+  </div>
+</div>
+
+<div>
+  <button [disabled]="!myformGroup.valid">Register</button>
+</div>
+
+{{ myformGroup.value | json }}

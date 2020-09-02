@@ -1,0 +1,11 @@
+<h1>Multi Field Form - From Page1 Component</h1>
+<div [formGroup]="myFormGroup">
+  <input type="text" name="" id="" formControlName="username" />
+  <input type="password" name="" id="" formControlName="password" />
+</div>
+
+<div>
+  <button [disabled]="!myFormGroup.valid">Sign In</button>
+</div>
+
+{{ myFormGroup.value | json }} / {{ myFormGroup.valid }}

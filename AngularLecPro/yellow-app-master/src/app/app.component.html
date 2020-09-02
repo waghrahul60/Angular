@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row bg-dark sticky-top" style="height: 60px">
+    <div class="col d-flex align-items-center text-light h5">Yellow Man</div>
+
+    <div class="col d-flex align-items-center justify-content-end">
+      <button
+        class="btn btn-sm btn-secondary mr-1"
+        (click)="gotoRoute(item.link)"
+        *ngFor="let item of linksList"
+      >
+        {{ item.title }}
+      </button>
+    </div>
+  </div>
+
+  <!-- TO Make Sticky Works-->
+  <router-outlet></router-outlet>
+</div>

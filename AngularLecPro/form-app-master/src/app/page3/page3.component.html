@@ -1,0 +1,61 @@
+<h1>From Page 3 Component :: Using Form Builder :: {{ cs.projectTitle }}</h1>
+
+<div [formGroup]="fbFormGroup">
+  <div>
+    <input type="text" formControlName="username" />
+    <label
+      for=""
+      style="color: red; font-size: small"
+      *ngIf="
+        fbFormGroup.get('username').invalid &&
+        fbFormGroup.get('username').touched
+      "
+      >Usenrmae Requried</label
+    >
+  </div>
+
+  <div>
+    <input type="text" formControlName="password" />
+    <label
+      for=""
+      style="color: red; font-size: small"
+      *ngIf="
+        fbFormGroup.get('password').invalid &&
+        fbFormGroup.get('password').touched
+      "
+      >Password Requried</label
+    >
+  </div>
+
+  <div>
+    <input type="text" formControlName="email" />
+    <label
+      for=""
+      style="color: red; font-size: small"
+      *ngIf="
+        fbFormGroup.get('email').invalid && fbFormGroup.get('email').touched
+      "
+      >Email Requried</label
+    >
+  </div>
+
+  <div>
+    <input type="text" formControlName="mobile" />
+    <label
+      for=""
+      style="color: red; font-size: small"
+      *ngIf="
+        fbFormGroup.get('mobile').invalid && fbFormGroup.get('mobile').touched
+      "
+      >MObile Requried</label
+    >
+  </div>
+
+  <div>
+    <button [disabled]="!fbFormGroup.valid" (click)="registerUser()">
+      Register
+    </button>
+  </div>
+</div>
+
+{{ fbFormGroup.value | json }}
