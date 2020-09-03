@@ -1,0 +1,14 @@
+.wave {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 2;
+}
+
+.box {
+  background: whitesmoke;
+  height: 50%;
+  width: 50%;
+  z-index: 7;
+}
