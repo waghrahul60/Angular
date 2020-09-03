@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container-fluid" style="background: #f44336">
   <img class="wave" src="../../assets/1.svg" />
-  <div class="row" style="height: 100vh; background: #f44336">
+  <div class="row" style="height: 100vh; background: #f44336; width: 95%">
     <div
       class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center"
       style="background: #f44336"
@@ -14,80 +14,98 @@
     <div
       class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-right align-items-center"
     >
-      <div class="row box rounded p-2">
+      <div
+        class="row box rounded p-2 justify-content-center box"
+        [formGroup]="fbFormGroup"
+      >
         <!-- Default form register -->
-        <form class="text-center">
-          <p class="h4 mb-4">Sign up</p>
 
-          <div class="form-row mb-4">
-            <div class="col">
-              <!-- First name -->
-              <input
-                type="text"
-                id="defaultRegisterFormFirstName"
-                class="form-control"
-                placeholder="First name"
-              />
-            </div>
-            <div class="col">
-              <!-- Last name -->
-              <input
-                type="text"
-                id="defaultRegisterFormLastName"
-                class="form-control"
-                placeholder="Last name"
-              />
-            </div>
+        <p class="h4 mb-2">Sign up</p>
+
+        <div class="form-row mb-2 justify-content-center">
+          <div class="col">
+            <!-- First name -->
+            <input
+              type="text"
+              id="firstName"
+              class="form-control"
+              placeholder="First name"
+              formControlName="firstName"
+            />
           </div>
+          <div class="col">
+            <!-- Last name -->
+            <input
+              type="text"
+              id="lastName"
+              class="form-control"
+              placeholder="Last name"
+              formControlName="lastName"
+            />
+          </div>
+        </div>
+        <!-- UserName -->
+        <input
+          type="text"
+          id="userName"
+          class="form-control mb-2"
+          placeholder="userName"
+          formControlName="userName"
+        />
 
-          <!-- E-mail -->
-          <input
-            type="email"
-            id="defaultRegisterFormEmail"
-            class="form-control mb-4"
-            placeholder="E-mail"
-          />
+        <!-- E-mail -->
+        <input
+          type="email"
+          id="email"
+          class="form-control mb-2"
+          placeholder="E-mail"
+          formControlName="email"
+        />
 
-          <!-- Password -->
-          <input
-            type="password"
-            id="defaultRegisterFormPassword"
-            class="form-control"
-            placeholder="Password"
-            aria-describedby="defaultRegisterFormPasswordHelpBlock"
-          />
-          <small
-            id="defaultRegisterFormPasswordHelpBlock"
-            class="form-text text-muted mb-4"
-          >
-            At least 8 characters and 1 digit
-          </small>
+        <!-- Password -->
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          placeholder="Password"
+          aria-describedby="passwordHelp"
+          formControlName="password"
+        />
+        <small id="passwordHelp" class="form-text text-muted mb-2">
+          At least 8 characters and 1 digit
+        </small>
 
-          <!-- Phone number -->
-          <input
-            type="text"
-            id="defaultRegisterPhonePassword"
-            class="form-control"
-            placeholder="Phone number"
-            aria-describedby="defaultRegisterFormPhoneHelpBlock"
-          />
-          <small
-            id="defaultRegisterFormPhoneHelpBlock"
-            class="form-text text-muted mb-4"
-          >
-            Optional - for two-step authentication
-          </small>
+        <!-- Phone number -->
+        <input
+          type="number"
+          id="phoneNumber"
+          class="form-control"
+          placeholder="Phone number"
+          aria-describedby="phoneHelp"
+          formControlName="phoneNumber"
+        />
+        <small id="phoneHelp" class="form-text text-muted mb-2">
+          Optional - for two-step authentication
+        </small>
 
-          <!-- Sign up button -->
-          <button mdbBtn color="info" block="true" class="my-4" type="submit">
-            Sign Up
-          </button>
-          <!-- Login -->
-          <p>
-            Already Register?
-            <a href="../login">login</a>
-          </p>
-        </form>
+        <!-- Sign up button -->
+        <button
+          mdbBtn
+          color="info"
+          block="true"
+          class="my-2"
+          type="submit"
+          [disabled]="!fbFormGroup.valid"
+          (click)="registerHere()"
+        >
+          Sign Up
+        </button>
+        <!-- Login -->
+        <p>
+          Already Register?
+          <a href="../login">login</a>
+        </p>
+        {{ fbFormGroup.value | json }}
         <!-- Default form register -->
       </div>
     </div>
