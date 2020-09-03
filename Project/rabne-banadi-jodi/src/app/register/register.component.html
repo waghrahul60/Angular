@@ -18,6 +18,13 @@
         class="row box rounded p-2 justify-content-center box"
         [formGroup]="fbFormGroup"
       >
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="uiInvalidCredential"
+        >
+          A simple danger alert—check it out!
+        </div>
         <!-- Default form register -->
 
         <p class="h4 mb-2">Sign up</p>
@@ -103,7 +110,7 @@
         <!-- Login -->
         <p>
           Already Register?
-          <a href="../login">login</a>
+          <a routerLink="../login">login</a>
         </p>
         {{ fbFormGroup.value | json }}
         <!-- Default form register -->

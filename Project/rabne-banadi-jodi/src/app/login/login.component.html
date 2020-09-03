@@ -10,7 +10,11 @@
     </div>
     <div
       class="col-12 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-right align-items-center"
+      [formGroup]="fbFormGroup"
     >
+      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+        A simple danger alert—check it out!
+      </div>
       <div class="row box rounded p-4 justify-content-center box">
         <!-- Default form login -->
 
@@ -28,7 +32,7 @@
         <input
           type="password"
           id="defaultLoginFormPassword"
-          class="form-control mb-4"
+          class="form-control mb-2"
           placeholder="Password"
         />
 
@@ -44,7 +48,16 @@
         </div>
 
         <!-- Sign in button -->
-        <button mdbBtn color="info" block="true" class="my-3" type="submit">
+        <button
+          mdbBtn
+          color="info"
+          block="true"
+          class="my-2"
+          type="submit"
+          style="height: 30px"
+          [disabled]="!fbFormGroup.valid"
+          (click)="loginProcessHere()"
+        >
           Sign in
         </button>
 
@@ -52,7 +65,7 @@
         <div>
           <p>
             Not a member?
-            <a href="../register">Register</a>
+            <a routerLink="../register">Register</a>
           </p>
         </div>
 
