@@ -1,85 +1,48 @@
 <div class="container-fluid">
   <img class="wave" src="../../assets/1.svg" />
   <div class="row" style="height: 100vh; background: #f44336">
-    <div class="col" style="background: #f44336">
+    <div class="col-12 col-md" style="background: #f44336">
       <img
         src="../../assets/login/5.png"
         alt=""
         style="height: 100%; width: 100%; object-fit: cover"
       />
     </div>
-    <div class="col d-flex justify-content-center align-items-center">
+    <div class="col-12 col-md d-flex justify-content-center align-items-center">
       <div class="box rounded">
-        <!-- Default form login -->
-        <form class="text-center border border-light p-5" action="#!">
-          <p class="h4 mb-4">Sign in</p>
-
-          <!-- Email -->
-          <input
-            type="email"
-            id="defaultLoginFormEmail"
-            class="form-control mb-4"
-            placeholder="E-mail"
-          />
-
-          <!-- Password -->
-          <input
-            type="password"
-            id="defaultLoginFormPassword"
-            class="form-control mb-4"
-            placeholder="Password"
-          />
-
-          <div class="d-flex justify-content-around">
-            <div>
-              <!-- Remember me -->
-              <div class="custom-control custom-checkbox">
-                <input
-                  type="checkbox"
-                  class="custom-control-input"
-                  id="defaultLoginFormRemember"
-                />
-                <label
-                  class="custom-control-label"
-                  for="defaultLoginFormRemember"
-                  >Remember me</label
-                >
-              </div>
-            </div>
-            <div>
-              <!-- Forgot password -->
-              <a href="">Forgot password?</a>
-            </div>
+        <div class="p-2">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
           </div>
-
-          <!-- Sign in button -->
-          <button class="btn btn-info btn-block my-4" type="submit">
-            Sign in
-          </button>
-
-          <!-- Register -->
-          <p>
-            Not a member?
-            <a href="">Register</a>
-          </p>
-
-          <!-- Social login -->
-          <p>or sign in with:</p>
-
-          <a href="#" class="mx-2" role="button"
-            ><i class="fab fa-facebook-f light-blue-text"></i
-          ></a>
-          <a href="#" class="mx-2" role="button"
-            ><i class="fab fa-twitter light-blue-text"></i
-          ></a>
-          <a href="#" class="mx-2" role="button"
-            ><i class="fab fa-linkedin-in light-blue-text"></i
-          ></a>
-          <a href="#" class="mx-2" role="button"
-            ><i class="fab fa-github light-blue-text"></i
-          ></a>
-        </form>
-        <!-- Default form login -->
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="form-group form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Check me out</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
       </div>
     </div>
   </div>
