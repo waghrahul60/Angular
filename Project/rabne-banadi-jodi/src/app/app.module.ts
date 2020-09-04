@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { MyhomeComponent } from './myhome/myhome.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProfileComponent } from './profile/profile.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RegisterComponent,
     PageNotFoundComponent,
     MyhomeComponent,
+    ProfileComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
