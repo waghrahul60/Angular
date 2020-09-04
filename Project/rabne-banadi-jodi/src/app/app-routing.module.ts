@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MainComponent } from './main/main.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { AllusersComponent } from './allusers/allusers.component';
 
 const routes: Routes = [
   { path: '', component: MyhomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: '', component: MainComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'contact-us', component: ContactUsComponent },
+      { path: 'users', component: AllusersComponent },
     ],
   },
 

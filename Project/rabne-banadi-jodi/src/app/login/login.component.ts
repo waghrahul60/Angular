@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
     if (result.opr) {
       this.router.navigate(['home']);
       sessionStorage.setItem('sid', 'true');
+      sessionStorage.setItem('user', data.username);
     } else {
       this.uiInvalidCredential = true;
     }

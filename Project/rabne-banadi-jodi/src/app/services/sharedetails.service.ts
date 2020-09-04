@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 
-import { sharedetails } from '../service/sharedetails';
-
 @Injectable({
   providedIn: 'root',
 })

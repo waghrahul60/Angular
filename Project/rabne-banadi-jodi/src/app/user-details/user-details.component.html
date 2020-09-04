@@ -1,9 +1,6 @@
 <div class="container-fluid" style="background: #e92415">
   <div class="container p-0" style="background: #f44336">
-    <div
-      class="row justify-content-center"
-      style="height: 100vh; border: 2px solid red"
-    >
+    <div class="row justify-content-center" style="height: 100vh">
       <div
         class="col-10 view"
         style="
@@ -12,15 +9,19 @@
           background-size: cover;
           background-position: center center;
           height: 100%;
-          border: 2px solid blue;
         "
       >
-        <div class="row" style="height: 200px; border: 3px solid yellow"></div>
+        <div class="row" style="height: 195px">
+          {{ userData | json }}
+        </div>
         <div class="row justify-content-center">
-          <div class="col d-flex justify-content-center">
+          <div
+            class="col d-flex justify-content-center"
+            [formGroup]="fbFormGroup"
+          >
             <!-- Default form register -->
-            <div class="text-center border border-light p-2 box">
-              <p class="h4 mb-4">User Details</p>
+            <div class="text-center p-2 box">
+              <p class="h4" style="color: black">User Details</p>
 
               <div class="form-row mb-4">
                 <div class="col">
@@ -29,7 +30,8 @@
                     type="text"
                     id="defaultRegisterFormFirstName"
                     class="form-control"
-                    placeholder="First name"
+                    placeholder="religion"
+                    formControlName="religion"
                   />
                 </div>
                 <div class="col">
@@ -38,55 +40,75 @@
                     type="text"
                     id="defaultRegisterFormLastName"
                     class="form-control"
-                    placeholder="Last name"
+                    placeholder="mothertoung"
+                    formControlName="mothertoung"
                   />
                 </div>
               </div>
-
-              <!-- E-mail -->
-              <input
-                type="email"
-                id="defaultRegisterFormEmail"
-                class="form-control mb-4"
-                placeholder="E-mail"
-              />
-
-              <!-- Password -->
-              <input
-                type="password"
-                id="defaultRegisterFormPassword"
-                class="form-control"
-                placeholder="Password"
-                aria-describedby="defaultRegisterFormPasswordHelpBlock"
-              />
-              <small
-                id="defaultRegisterFormPasswordHelpBlock"
-                class="form-text text-muted mb-4"
-              >
-                At least 8 characters and 1 digit
-              </small>
-
-              <!-- Phone number -->
-              <input
-                type="text"
-                id="defaultRegisterPhonePassword"
-                class="form-control"
-                placeholder="Phone number"
-                aria-describedby="defaultRegisterFormPhoneHelpBlock"
-              />
-              <small
-                id="defaultRegisterFormPhoneHelpBlock"
-                class="form-text text-muted mb-4"
-              >
-                Optional - for two-step authentication
-              </small>
-
-              <!-- Newsletter -->
-              <div class="row">
-                <div class="col-md-6 mx-auto d-flex justify-content-center">
-                  <mdb-checkbox [default]="true"
-                    >Subscribe to our newsletter</mdb-checkbox
-                  >
+              <div class="form-row mb-4">
+                <div class="col">
+                  <!-- First name -->
+                  <input
+                    type="text"
+                    id="defaultRegisterFormFirstName"
+                    class="form-control"
+                    placeholder="Birth Date"
+                    formControlName="dob"
+                  />
+                </div>
+                <div class="col">
+                  <!-- Last name -->
+                  <input
+                    type="text"
+                    id="defaultRegisterFormLastName"
+                    class="form-control"
+                    placeholder="cast"
+                    formControlName="cast"
+                  />
+                </div>
+              </div>
+              <div class="form-row mb-4">
+                <div class="col">
+                  <!-- First name -->
+                  <input
+                    type="text"
+                    id="defaultRegisterFormFirstName"
+                    class="form-control"
+                    placeholder="sub cast"
+                    formControlName="subcast"
+                  />
+                </div>
+                <div class="col">
+                  <!-- Last name -->
+                  <input
+                    type="text"
+                    id="defaultRegisterFormLastName"
+                    class="form-control"
+                    placeholder="Marital Sattus"
+                    formControlName="maritalstatus"
+                  />
+                </div>
+              </div>
+              <div class="form-row mb-4">
+                <div class="col">
+                  <!-- First name -->
+                  <input
+                    type="text"
+                    id="defaultRegisterFormFirstName"
+                    class="form-control"
+                    placeholder="height"
+                    formControlName="hight"
+                  />
+                </div>
+                <div class="col">
+                  <!-- Last name -->
+                  <input
+                    type="text"
+                    id="defaultRegisterFormLastName"
+                    class="form-control"
+                    placeholder="Numbet Of family members"
+                    formControlName="familymembers"
+                  />
                 </div>
               </div>
 
@@ -95,35 +117,12 @@
                 mdbBtn
                 color="info"
                 block="true"
-                class="my-4"
+                class="btn btn-dark"
                 type="submit"
+                (click)="adduserdetails()"
               >
-                Sign in
+                Continue
               </button>
-
-              <!-- Social register -->
-              <p>or sign up with:</p>
-
-              <a type="button" class="light-blue-text mx-2">
-                <mdb-icon fab icon="facebook"></mdb-icon>
-              </a>
-              <a type="button" class="light-blue-text mx-2">
-                <mdb-icon fab icon="twitter"></mdb-icon>
-              </a>
-              <a type="button" class="light-blue-text mx-2">
-                <mdb-icon fab icon="linkedin"></mdb-icon>
-              </a>
-              <a type="button" class="light-blue-text mx-2">
-                <mdb-icon fab icon="github"></mdb-icon>
-              </a>
-
-              <hr />
-
-              <!-- Terms of service -->
-              <p>
-                By clicking <em>Sign up</em> you agree to our
-                <a href="" target="_blank">terms of service</a>
-              </p>
             </div>
             <!-- Default form register -->
           </div>

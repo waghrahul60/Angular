@@ -20,6 +20,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LogoutModalComponent } from './logout-modal/logout-modal.component';
 import { MainComponent } from './main/main.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { MapComponent } from './map/map.component';
+import { AllusersComponent } from './allusers/allusers.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     LogoutModalComponent,
     MainComponent,
     UserDetailsComponent,
+    MapComponent,
+    AllusersComponent,
   ],
   imports: [
     BrowserModule,
