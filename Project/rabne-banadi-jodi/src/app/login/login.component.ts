@@ -30,9 +30,10 @@ export class LoginComponent implements OnInit {
     // ajax call
     const url = 'http://localhost:3000/auth-user';
     const result: any = await this.http.post(url, data).toPromise();
+
     if (result.opr) {
-      sessionStorage.setItem('sid', 'true');
       this.router.navigate(['home']);
+      sessionStorage.setItem('sid', 'true');
     } else {
       this.uiInvalidCredential = true;
     }

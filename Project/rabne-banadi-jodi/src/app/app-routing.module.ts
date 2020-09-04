@@ -5,13 +5,24 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { MyhomeComponent } from './myhome/myhome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: MyhomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 
-  { path: 'home', component: MyhomeComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      { path: '', component: MainComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'contact-us', component: ContactUsComponent },
+    ],
+  },
 
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },

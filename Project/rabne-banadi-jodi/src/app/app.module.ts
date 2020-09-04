@@ -16,6 +16,9 @@ import { MyhomeComponent } from './myhome/myhome.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from './profile/profile.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { LogoutModalComponent } from './logout-modal/logout-modal.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { LogoutComponent } from './logout/logout.component';
     MyhomeComponent,
     ProfileComponent,
     LogoutComponent,
+    ContactUsComponent,
+    LogoutModalComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,

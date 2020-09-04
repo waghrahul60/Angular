@@ -58,7 +58,17 @@
           class="form-control mb-2"
           placeholder="userName"
           formControlName="userName"
+          (blur)="checkUsername()"
         />
+
+        <div
+          class=""
+          role="alert"
+          *ngIf="isValidUsername"
+          style="color: red; font-size: 15px"
+        >
+          username Already Exist
+        </div>
 
         <!-- E-mail -->
         <input
@@ -67,7 +77,16 @@
           class="form-control mb-2"
           placeholder="E-mail"
           formControlName="email"
+          (blur)="checkEmail()"
         />
+        <div
+          class=""
+          role="alert"
+          *ngIf="isValidEmail"
+          style="color: red; font-size: 15px"
+        >
+          Email Already Exist
+        </div>
 
         <!-- Password -->
         <input
@@ -78,7 +97,7 @@
           aria-describedby="passwordHelp"
           formControlName="password"
         />
-        <small id="passwordHelp" class="form-text text-muted mb-2">
+        <small id="passwordHelp" class="form-text text-muted mb-1">
           At least 8 characters and 1 digit
         </small>
 
