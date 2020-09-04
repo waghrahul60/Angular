@@ -2,6 +2,7 @@ import { Component, OnInit, ɵConsole } from '@angular/core';
 import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { SharedetailsService } from '../services/sharedetails.service';
 
 @Component({
   selector: 'app-register',
@@ -43,7 +44,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private http: HttpClient
+    private http: HttpClient,
+    private sharedData: SharedetailsService
   ) {}
 
   ngOnInit(): void {}
@@ -75,7 +77,7 @@ export class RegisterComponent implements OnInit {
     const url = 'http://localhost:3000/adduser';
     console.log(data);
     await this.http.post(url, data).toPromise();
-
     this.router.navigate(['login']);
+    this.sharedData.sendData(data);
   }
 }

@@ -19,6 +19,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LogoutModalComponent } from './logout-modal/logout-modal.component';
 import { MainComponent } from './main/main.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MainComponent } from './main/main.component';
     ContactUsComponent,
     LogoutModalComponent,
     MainComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,
