@@ -10,12 +10,14 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MainComponent } from './main/main.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AllusersComponent } from './allusers/allusers.component';
+import { DemoComponent } from './demo/demo.component';
 
 const routes: Routes = [
   { path: '', component: MyhomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'userdetails', component: UserDetailsComponent },
+  { path: 'demo', component: DemoComponent },
 
   {
     path: 'home',

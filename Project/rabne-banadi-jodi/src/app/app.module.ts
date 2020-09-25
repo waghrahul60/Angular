@@ -22,6 +22,7 @@ import { MainComponent } from './main/main.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { MapComponent } from './map/map.component';
 import { AllusersComponent } from './allusers/allusers.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { AllusersComponent } from './allusers/allusers.component';
     UserDetailsComponent,
     MapComponent,
     AllusersComponent,
+    DemoComponent,
   ],
   imports: [
     BrowserModule,
