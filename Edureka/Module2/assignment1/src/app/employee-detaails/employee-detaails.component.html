@@ -1,0 +1,9 @@
+<h1>Employee Details</h1>
+
+<p>Employee Id: <input type="text" placeholder="{{ employee.EmployeeId }}" [(ngModel)]="employee.EmployeeId"></p>
+<p>First Name :  <input type="text" placeholder="{{ employee.FirstName }}" [(ngModel)]="employee.FirstName"></p>
+<p>Last Name :  <input type="text" placeholder="{{ employee.LastName }}" [(ngModel)]="employee.LastName"></p>
+<p>Dept :  <input type="text" placeholder="{{ employee.Dept }}" [(ngModel)]="employee.Dept"></p>
+<p>City:  <input type="text" placeholder="{{ employee.City }}" [(ngModel)]="employee.City"></p>
+<p>Email: <input type="text" placeholder="{{ employee.Email }}" [(ngModel)]="employee.Email"></p>
+<button (click)="Update()"class="btn btn-dark">Update</button>

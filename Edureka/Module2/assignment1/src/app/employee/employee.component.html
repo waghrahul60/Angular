@@ -1,0 +1,31 @@
+<p>employee works!</p>
+
+<h1>{{ employe[0].EmployeeId }}</h1>
+
+
+<table  class="table">
+    <thead>
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Dept</th>
+        <th scope="col">City</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let emp of employe">
+      <tr>
+        <th scope="row">{{ emp.EmployeeId }}</th>
+        <td>{{ emp.FirstName }}</td>
+        <td>{{ emp.LastName }}}</td>
+        <td>{{ emp.Dept }}</td>
+        <td>{{ emp.City }}</td>
+        <td>{{ emp.Email }}</td>
+        <td><button  class="btn btn-dark" (click)="ViewEmp(emp)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-employee-detaails *ngIf="currentEmployee" (updateEmail)='onUpdateEmail($event)' [employee]='currentEmployee'></app-employee-detaails>
