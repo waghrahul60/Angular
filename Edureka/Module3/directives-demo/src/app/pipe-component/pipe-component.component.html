@@ -1,0 +1,33 @@
+<p>Inbuild Pipes</p>
+<div>
+   
+    <h1>Title: {{ title | titlecase }}</h1>
+
+    <h1>Salary: {{ salary | currency }}</h1>
+
+    <h1>Dob: {{ dob | date: 'full' | uppercase}}</h1>
+
+    <h1>Dob: {{ dob | date: 'shortDate'}}</h1>
+
+    <h1>Dob: {{ dob | date: 'HH:mm' }}</h1>\
+
+    Enter Here : <input type="text" [(ngModel)]="term">
+
+    <button (click)="convert()">click</button>
+    <p>Uppercase: {{ term | uppercase }} </p>
+    <p>Normal: {{ term }} </p>
+
+</div>
+
+<div>
+    <h1>Custom Pipes</h1>
+    <li *ngFor="let product of products | products: 'Angular' ">
+        {{ product.name}} -- {{ product.category}}
+    </li>
+</div>
+
+<div>
+    <li *ngFor="let product of products | products: 'Java' ">
+        {{ product.name}} -- {{ product.category}}
+    </li>
+</div>

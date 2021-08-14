@@ -1,0 +1,26 @@
+<div>
+  <h1>Structurel Directives</h1>
+
+<ul *ngFor="let cource of cources">
+  <li *ngIf="cource.price > 250">{{ cource.name }} -- {{ cource.category }}</li>
+</ul>
+
+
+<div [ngSwitch]="cources">
+  <p *ngSwitchCase="'Angular'">Angular is a web app Franework</p>
+  <p *ngSwitchCase="'AWS cloud'">Aws is cloud platform</p>
+  <p *ngSwitchCase="'Java'">Java is middlewaare platform</p>
+
+</div>
+ 
+
+  <!-- Attribute Directive -->
+  <input  type="text" [ngModel]="username">
+
+  <!-- Structurel Directives -->
+  <button *ngIf="flag">Click</button>
+
+  <button [hidden]="flag">Reset</button>
+
+  <app-pipe-component></app-pipe-component>
+</div>
