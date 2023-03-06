@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, DoCheck, ViewChild } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 import { Room, RoomList } from './rooms';
 
 @Component({
@@ -7,7 +8,9 @@ import { Room, RoomList } from './rooms';
   styleUrls: ['./rooms.component.css']
 })
 
-export class RoomsComponent {
+export class RoomsComponent implements AfterViewInit{
+  
+  
 
   hotelName = "rahul hotel";
   noOfRooms = 10;
@@ -36,6 +39,7 @@ export class RoomsComponent {
   
 
   ngOnInit(): void {
+    console.log(this.headerComponent);
     this.roomList =  [{
       roomNumber: 1,
       roomType: "Deluxe Room",
@@ -80,7 +84,17 @@ export class RoomsComponent {
     this.roomList = [...this.roomList,room]
   }
 
+  // ngDoCheck(): void {
+  //   console.log("Do check is called");
+  //   throw new Error('Method not implemented.');
+  // }
+
+  @ViewChild(HeaderComponent, {static:true})headerComponent!: HeaderComponent; 
  
+  ngAfterViewInit(): void {
+    console.log(this.headerComponent);
+    throw new Error('Method not implemented.');
+  }
 
  
 }
