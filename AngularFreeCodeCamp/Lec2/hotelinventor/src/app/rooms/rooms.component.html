@@ -1,6 +1,8 @@
 <hinv-header></hinv-header>
 <h1>Welcome to {{hotelName}}</h1>
 
+
+
 <div [hidden]="hideRooms">
     <div  [innerText]="noOfRooms"> </div>
 </div>
@@ -23,3 +25,5 @@
     <hinv-rooms-list [rooms]="roomList"
     (roomSelector)="selectRoom($event)"></hinv-rooms-list>
 </div>
+
+<h1>{{ totalbyte }}</h1>
